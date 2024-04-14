@@ -14,6 +14,10 @@
 		BA2E28B52BCC27EA00E19E58 /* ColorAppSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2E28B42BCC27EA00E19E58 /* ColorAppSwiftUITests.swift */; };
 		BA2E28BF2BCC27EA00E19E58 /* ColorAppSwiftUIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2E28BE2BCC27EA00E19E58 /* ColorAppSwiftUIUITests.swift */; };
 		BA2E28C12BCC27EA00E19E58 /* ColorAppSwiftUIUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2E28C02BCC27EA00E19E58 /* ColorAppSwiftUIUITestsLaunchTests.swift */; };
+		BA2E28CE2BCC287400E19E58 /* SliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2E28CD2BCC287400E19E58 /* SliderView.swift */; };
+		BA2E28D02BCC289100E19E58 /* LabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2E28CF2BCC289100E19E58 /* LabelView.swift */; };
+		BA2E28D22BCC28B900E19E58 /* ColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2E28D12BCC28B900E19E58 /* ColorView.swift */; };
+		BA2E28D42BCC28DE00E19E58 /* TextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2E28D32BCC28DE00E19E58 /* TextFieldView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +48,10 @@
 		BA2E28BA2BCC27EA00E19E58 /* ColorAppSwiftUIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ColorAppSwiftUIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA2E28BE2BCC27EA00E19E58 /* ColorAppSwiftUIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorAppSwiftUIUITests.swift; sourceTree = "<group>"; };
 		BA2E28C02BCC27EA00E19E58 /* ColorAppSwiftUIUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorAppSwiftUIUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		BA2E28CD2BCC287400E19E58 /* SliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderView.swift; sourceTree = "<group>"; };
+		BA2E28CF2BCC289100E19E58 /* LabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelView.swift; sourceTree = "<group>"; };
+		BA2E28D12BCC28B900E19E58 /* ColorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorView.swift; sourceTree = "<group>"; };
+		BA2E28D32BCC28DE00E19E58 /* TextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +104,10 @@
 			children = (
 				BA2E28A32BCC27E900E19E58 /* ColorAppSwiftUIApp.swift */,
 				BA2E28A52BCC27E900E19E58 /* ContentView.swift */,
+				BA2E28D12BCC28B900E19E58 /* ColorView.swift */,
+				BA2E28CF2BCC289100E19E58 /* LabelView.swift */,
+				BA2E28CD2BCC287400E19E58 /* SliderView.swift */,
+				BA2E28D32BCC28DE00E19E58 /* TextFieldView.swift */,
 				BA2E28A72BCC27EA00E19E58 /* Assets.xcassets */,
 				BA2E28A92BCC27EA00E19E58 /* Preview Content */,
 			);
@@ -257,8 +269,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA2E28CE2BCC287400E19E58 /* SliderView.swift in Sources */,
+				BA2E28D02BCC289100E19E58 /* LabelView.swift in Sources */,
+				BA2E28D42BCC28DE00E19E58 /* TextFieldView.swift in Sources */,
 				BA2E28A62BCC27E900E19E58 /* ContentView.swift in Sources */,
 				BA2E28A42BCC27E900E19E58 /* ColorAppSwiftUIApp.swift in Sources */,
+				BA2E28D22BCC28B900E19E58 /* ColorView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
