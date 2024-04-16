@@ -8,21 +8,39 @@
 import SwiftUI
 
 struct TextFieldView: View {
-    @State private var valueText = ""
+    @Binding var valueText: String
+    @Binding var value: Double
+    
+    @State private var showAlert = false
     
     var body: some View {
-        TextField(" 0.00", text: $valueText)
-            .overlay(RoundedRectangle(cornerRadius: 4).stroke(lineWidth: 2).foregroundStyle(Color.blue))
-            .frame(width: 50)
-            .padding(EdgeInsets(top: 8, leading: 16, bottom: 8, trailing: 16))
-            .keyboardType(.numberPad).buttonStyle(.automatic)
-            
-            
-            
-            
+        TextField("", text: $valueText) { _ in
+            withAnimation {
+                checkValue()
+            }
+        }
+        .frame(width: 55, alignment: .trailing)
+        .multilineTextAlignment(.trailing)
+        .textFieldStyle(.roundedBorder)
+        .keyboardType(.decimalPad)
+        .alert("Wrong Format", isPresented: $showAlert, actions: {}) {
+            Text("Please, enter value from 0 to 255")
+        }
+    }
+}
+
+extension TextFieldView {
+    private func checkValue() {
+        if let value = Int(valueText), (0...255).contains(value) {
+            self.value = Double(value)
+            return
+        }
+        showAlert.toggle()
+        value = 0
+        valueText = "0"
     }
 }
 
 #Preview {
-    TextFieldView()
+    TextFieldView(valueText: .constant("128"), value: .constant(128.0))
 }

@@ -8,11 +8,16 @@
 import SwiftUI
 
 struct LabelView: View {
+    
+    let value: Double
+    
     var body: some View {
-        Text("0.00")
+        Text("\(lround(value))")
+            .frame(width: 55, alignment: .leading)
+            .foregroundStyle(Color.white)
     }
 }
 
 #Preview {
-    LabelView()
+    LabelView(value: 128)
 }

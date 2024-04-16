@@ -8,16 +8,29 @@
 import SwiftUI
 
 struct SliderView: View {
-    @State private var value = Double.random(in: 0...255)
+    @Binding var value: Double
+    @State private var textValue = ""
+    
     let color: Color
     
     var body: some View {
-        Slider(value: $value, in: 0...255, step: 1)
-            .frame(width: 190)
-            .padding()
+        HStack {
+            LabelView(value: value)
+            
+            Slider(value: $value, in: 0...255, step: 1)
+                .tint(color)
+                .onChange(of: value) { isOnFocus in
+                    textValue = "\(lround(isOnFocus))"
+                }
+            
+            TextFieldView(valueText: $textValue, value: $value)
+        }
+        .onAppear {
+            textValue = "\(lround(value))"
+        }
     }
 }
 
 #Preview {
-    SliderView(color: .red)
+    SliderView(value: .constant(100), color: .red)
 }
